@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+html {
+    overflow: hidden;
+}
+
+html, body, .container{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Courgette', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*  */
+.bounce {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #FFC502;
+}
+
+/* navigation  */
+.navigate {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 1rem;
+    left: -1rem;
+    z-index: 10;
+}
+.navigate ul {
+    display: flex;
+    justify-content: right;
+}
+.navigate ul li{ 
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navigate ul li a{  
+    color: #fff; 
+    text-decoration: none; 
+    outline: none;
+    position: relative;;
+}
+.navigate ul li a::after{  
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s;
+    z-index: 15;
+}
+.navigate ul li a:hover:after{  
+    width: 60%;
+    
+} 
+/* section */
+
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#section1 {
+    background-color: dodgerblue;
+}
+
+#section2 {
+    background-color: rgb(204, 36, 70);
+}
+
+#section3 {
+    background-color: coral;
+}
+
+#section4 {
+    background-color: #FFC502;
+}
+
+
+@keyframes watari {
+    
+}
+
+
+/* 별 이동효과 */
+@keyframes moveStar {
+  from {
+    transform: translate(-50%, -50%) rotate(0)
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+  }
+}
+
+
+@media ( max-width: 768px ) {
+    .navigate {
+        left: 0;
+    }
+    .navigate ul {
+        justify-content: center;
+    }
+}
