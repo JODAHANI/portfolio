@@ -61,7 +61,7 @@ $(document).ready(function () {
     });
 })
 
-consoleText(['안녕하세요.', '프론트엔드 개발자를 꿈꾸는', '조다한입니다.'], 'name', ['white']);
+consoleText(['안녕하세요.', '','프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -97,7 +97,7 @@ function consoleText(words, id, colors) {
             target.innerHTML = words[0].substring(0, letterCount)
             letterCount += x;
         }
-    }, 100)
+    }, 90)
 }
 
 
