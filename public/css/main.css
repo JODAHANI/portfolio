@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Jua&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 html {
     overflow: hidden;
 }
 
-html, body, .container{
+html,
+body,
+.container {
     display: block;
     width: 100%;
     height: 100%;
@@ -31,11 +34,13 @@ html, body, .container{
     left: -1rem;
     z-index: 10;
 }
+
 .navigate ul {
     display: flex;
     justify-content: right;
 }
-.navigate ul li{ 
+
+.navigate ul li {
     padding: 0.5rem 1rem;
     cursor: pointer;
     color: #fff;
@@ -43,13 +48,15 @@ html, body, .container{
     font-size: 1.2rem;
 }
 
-.navigate ul li a{  
-    color: #fff; 
-    text-decoration: none; 
+.navigate ul li a {
+    color: #fff;
+    text-decoration: none;
     outline: none;
-    position: relative;;
+    position: relative;
+    ;
 }
-.navigate ul li a::after{  
+
+.navigate ul li a::after {
     content: '';
     display: block;
     position: absolute;
@@ -62,10 +69,12 @@ html, body, .container{
     transition: all 0.3s;
     z-index: 15;
 }
-.navigate ul li a:hover:after{  
+
+.navigate ul li a:hover:after {
     width: 60%;
-    
-} 
+
+}
+
 /* section */
 
 .section {
@@ -75,57 +84,50 @@ html, body, .container{
 }
 
 #section1 {
-    background-color: #0e0e10;
+    background-color: #0e0e14;
     position: relative;
 }
 
 #section2 {
-    background-color: rgb(204, 36, 70);
+    background-color: #0e0e14
 }
 
 #section3 {
-    background-color: coral;
+    background-color: #0e0e14;
+    left: 0;
+    top: 0;
 }
 
 #section4 {
-    background-color: 0e0e10;
+    background-color: #0e0e14;
 }
+
 /*  파티클 */
-#particles-js{
+#particles-js {
     height: inherit;
-    
+
 }
+
 .greeting-box {
-    display: block;
-    width: 80%;
-    height: inherit;
-    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 100%;
+    height: 10rem;
     text-align: center;
     color: #fff;
-    font-size: 5rem;
 }
+
 .greeting-box h3 {
-    position: absolute;
+    font-size: 5rem;
     width: 100%;
     font-weight: bold;
-    line-height: 10rem;
-    letter-spacing: 10px;
+    letter-spacing: -2px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* .greeting-box h3:first-child {
-    animation: greetingOne ease-out 1.5s forwards;    
-}
-.greeting-box h3:nth-child(2) {
-    opacity: 0;
-    top: 48%;
-    transform: translateY(-50%);
-    animation: greetingTwo 1.5s 2s forwards ;
-} */
+
 .greeting-box h3:nth-child(1) {
     top: 50%;
     transform: translateY(-50%);
@@ -133,27 +135,331 @@ html, body, .container{
 
 
 
+
+/* section3 */
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#ship {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 33%;
+    left: 44%;
+    z-index: 3;
+}
+
+.distance {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 2rem;
+    left: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 3;
+}
+
+#section3 .card-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    max-width: 300px;
+    height: 30%;
+    max-height: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+}
+
+#section3 .card-box.on {
+    display: none;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.select {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    max-width: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+
+.line {
+    position: absolute;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    border: 1px solid #fff;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    transition: all 0.3s;
+    animation: circle 4s linear infinite;
+    cursor: pointer;
+}
+
+.line.two {
+    animation: circle 10s reverse infinite;
+}
+
+.line.three {
+    animation: circle 6s linear infinite;
+}
+
+
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    right: 115%;
+    background: none;
+    border: none;
+    color: #Fff;
+    cursor: pointer;
+}
+
+.slick-next {
+    left: 115%;
+}
+
+.line.on {
+    background-color: rgba(220, 20, 60, 0.5);
+    border: none;
+}
+
+li.body {
+    display: block;
+    z-index: 20;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: -2px;
+    font-weight: bold;
+    width: 100%;
+    height: inherit;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: -500%;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.modal.on {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 60%;
+    height: 40%;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.contents {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+}
+
+.left {
+    flex: 7;
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    flex: 3;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+}
+i {
+    color: #0e0e14;
+    display: block !important;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem !important;
+    padding-top: 0.8rem;
+    box-sizing: border-box;
+}
+
+input[name=tabmenu] {
+    display: none;
+}
+
+.tab {
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.items {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+.items div {
+    flex: 1;
+    width: 33.3333%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items div img{
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+
+.btn {
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.btn label {
+    background-color: gray;
+    width: 50px;
+    height: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[id=tab1]:checked~.tabs .items {
+    left: 0;
+}
+
+input[id=tab2]:checked~.tabs .items {
+    left: -100%;
+}
+
+input[id=tab3]:checked~.tabs .items {
+    left: -200%;
+}
+input[id=tab4]:checked~.tabs .items {
+    left: -300%;
+}
+
+input[id=tab5]:checked~.tabs .items {
+    left: -400%;
+}
+
+input[id=tab6]:checked~.tabs .items {
+    left: -500%;
+}
+
+
+input[id=tab1]:checked~.btn label[for=tab1],
+input[id=tab2]:checked~.btn label[for=tab2],
+input[id=tab3]:checked~.btn label[for=tab3],
+input[id=tab4]:checked~.btn label[for=tab4],
+input[id=tab5]:checked~.btn label[for=tab5],
+input[id=tab6]:checked~.btn label[for=tab6]  {
+    background-color: #111;
+}
+
+
+
+
+
+
+
+
+
+/* KeyFrames */
+/* circle rotate */
+@keyframes circle {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* greeting animation */
 @keyframes greetingOne {
     0% {
         opacity: 0;
         top: 60%;
     }
+
     60% {
         top: 60%;
         opacity: 0;
     }
+
     100% {
         top: 40%;
         transform: translateY(-50%);
         opacity: 1;
     }
-    
+
 }
+
 @keyframes greetingTwo {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -163,28 +469,49 @@ html, body, .container{
 /* 고래움지기이기 */
 @keyframes moving {
     from {
-        left:  90%;
+        left: 90%;
     }
+
     to {
-        left:  -10%;
+        left: -10%;
     }
 }
-@media ( max-width: 1024px ) {
+
+@media (max-width: 1024px) {
+    .bg {
+        width: 85%;
+        top: 45%
+    }
+
     .greeting-box h3 {
         font-size: 3rem;
         line-height: 4rem;
         letter-spacing: 5px;
     }
+
+    .slick-arrow {
+        right: 200%;
+    }
+
+    .slick-next {
+        left: 220%;
+    }
+
+    #ship {
+        left: 35%;
+    }
 }
 
 
-@media ( max-width: 768px ) {
+@media (max-width: 768px) {
     .navigate {
         left: 0;
     }
+
     .navigate ul {
         justify-content: center;
     }
+
     .greeting-box h3 {
         font-size: 2rem;
         line-height: 3rem;
