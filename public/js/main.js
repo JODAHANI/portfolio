@@ -3,9 +3,7 @@ const section1 = $("#section1");
 let page = 1;
 html.animate({ 'scrollTop': 0 }, 10);
 
-
 $(document).ready(function () {
-
     $(window).on("wheel", function (e) {
         let y = e.originalEvent.deltaY
         if (html.is(":animated")) return;
@@ -99,13 +97,6 @@ function consoleText(words, id, colors) {
         }
     }, 90)
 }
-
-
-
-
-
-
-
 
 
     // function whale() {

@@ -14,14 +14,16 @@ c.height = window.innerHeight;
 s.width = window.innerWidth;
 s.height = window.innerHeight;
 
+
+
 var shipCenter = { x: s.width / 2, y: s.height / 2 - 100 };
 var decreaseInterval = null;
 var flameEndX = shipCenter.x;
 
 let imgMap = (id) => {
     let imgs = []
-    for (let i = 0; i < 6; i++) {
-        let img = `<img src='../popol/${id}/0${i + 1}.png'>`
+    for (let i = 0; i < 5; i++) {
+        let img = `<img src='../img/${id}/0${i + 1}.jpg'>`
         imgs.push(img)
     }
     let box = `
@@ -31,7 +33,6 @@ let imgMap = (id) => {
         <input type="radio" name="tabmenu" id="tab3">
         <input type="radio" name="tabmenu" id="tab4">
         <input type="radio" name="tabmenu" id="tab5">
-        <input type="radio" name="tabmenu" id="tab6">
         <div class="tabs">
             <div class="items">
                 <div>${imgs[0]}</div>
@@ -39,7 +40,6 @@ let imgMap = (id) => {
                 <div>${imgs[2]}</div>
                 <div>${imgs[3]}</div>
                 <div>${imgs[4]}</div>
-                <div>${imgs[5]}</div>
             </div>
         </div>
         <div class="btn">
@@ -48,7 +48,6 @@ let imgMap = (id) => {
             <label for="tab3"></label>
             <label for="tab4"></label>
             <label for="tab5"></label>
-            <label for="tab6"></label>
         </div>
     </div>
     `
