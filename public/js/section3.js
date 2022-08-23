@@ -52,8 +52,22 @@ let imgMap = (id) => {
     </div>
     `
     $('.left').append(box)
+    rightBoxPainting(id)
 }
 
+function rightBoxPainting(id) {
+    let rightBox = `
+        <div class='right-box'>
+            <h2>${project[id - 1].title}</h2>
+            <h3>${project[id - 1].description}</h3>
+            <div class='bottom'>
+                <h4>Use: </h4>
+                <h5>${project[id - 1].technology}</h5>
+            </div>
+        </div>
+    `
+    $('.right').prepend(rightBox)
+}
 
 $(function () {
     $('.single-item').slick();
@@ -63,20 +77,25 @@ $(function () {
     $('.line, .slick-list').on('mouseout', function () {
         $('.line').removeClass('on')
     })
+    // 모달창 열 때.
     $('.line, .slick-list').on('click', function (e) {
         $('.modal').addClass('on')
         $('.card-box').addClass('on')
         let id = $('.slick-current')[0].id
         imgMap(id)
     })
+    // 모달창 닫을 때.
     $('.close').on('click', () => {
         $('.modal').removeClass('on')
         $('.card-box').removeClass('on')
         $('.left .tab').remove()
+        $('.right-box').remove()
     })
+
     draw();
     createStars();
     eventListeners();
+
     function eventListeners() {
         $('body').on('keydown', function (e) {
             switch (e.keyCode) {
@@ -128,7 +147,7 @@ $(function () {
 
     function drawBg() {
         ctx.rect(0, 0, c.width, c.height);
-        ctx.fillStyle = '#0e0e14';
+        ctx.fillStyle = 'rgb(10, 15, 30)';
         ctx.fill();
     }
 
@@ -320,3 +339,6 @@ $(function () {
 
 
 })
+
+
+

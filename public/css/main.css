@@ -93,7 +93,6 @@ body,
 }
 
 #section3 {
-    background-color: #0e0e14;
     left: 0;
     top: 0;
 }
@@ -288,6 +287,7 @@ li.body {
     height: 50%;
     width: 60%;
     max-width: 1000px;
+    max-height: 394px;
     height: 40%;
     background-color: #111;
     border-radius: 5px;
@@ -308,14 +308,51 @@ li.body {
 
 .right {
     flex: 3;
+    display: flex;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+
+.right-box {
+    flex: 8;
+}
+
+.right-box h2,
+.right-box h3,
+.right-box,h4 {
+    padding: 1rem 0;
+}
+.right-box h2 {
+    font-size: 1.3rem;
+}
+.right-box h3 {
+    letter-spacing: -1px;
+    line-height: 1.4rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+.right-box h4,
+.right-box h5 {
+    padding: 0;
+    margin: 0.3rem 0;
+    font-size: 0.7rem;
+}
+.bottom {
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.right-box h4{
+    font-size: 0.7rem;
 }
 
 .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
+    flex: 2;
+    max-width: 50px;
+    max-height: 50px;
     font-size: 1.5rem;
     line-height: 3rem;
     text-align: center;
@@ -421,7 +458,14 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
 
 
 
+/* rightBox */
 
+.contents .right {
+    color: #fff;
+}
+
+
+/* section3 */
 
 
 
@@ -480,13 +524,16 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
         left: -10%;
     }
 }
-
-@media (max-width: 1024px) {
+@media (max-width: 1120px) {
+    .contents {
+        display: block;
+    }
     .bg {
         width: 85%;
-        top: 45%
+        top: 35%
     }
-
+}
+@media (max-width: 1024px) {
     .greeting-box h3 {
         font-size: 3rem;
         line-height: 4rem;
