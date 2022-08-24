@@ -148,6 +148,7 @@ $(function () {
     function drawBg() {
         ctx.rect(0, 0, c.width, c.height);
         ctx.fillStyle = 'rgb(10, 15, 30)';
+        // ctx.fillStyle = 'rgb(2, 9, 20)';
         ctx.fill();
     }
 
