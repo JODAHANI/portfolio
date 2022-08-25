@@ -4,8 +4,9 @@ var page = 1;
 html.animate({ 'scrollTop': 0 }, 10);
 
 $(document).ready(function () {
-    $(window).on("wheel", function (e) {
+    function pageMove(e) {
         let y = e.originalEvent.deltaY
+
         if (html.is(":animated")) return;
 
         if (y > 0) {
@@ -15,12 +16,19 @@ $(document).ready(function () {
             if (page == 1) return;
             page--;
         }
-        console.log(page)
         if (page == 2) {
             classAdd()
         }
         let posTop = (page - 1) * $(window).height();
         html.animate({ scrollTop: posTop }, 700);
+    }
+    $(window).on("wheel", function (e) {
+        pageMove(e)
+        
+    })
+    $(window).on("scroll", function (e) {
+        pageMove(e)
+        
     })
 
     $('.navigate ul li a').on('click', function (e) {

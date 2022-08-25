@@ -575,6 +575,9 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
         line-height: 3rem;
         letter-spacing: 2px;
     }
+    .navigate {
+        font-size: 0.9rem;
+    }
 }
 @media (max-height: 650px) {
     .astronaut {
