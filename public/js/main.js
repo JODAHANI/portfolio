@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(window).on("wheel", function (e) {
         let y = e.originalEvent.deltaY
         if (html.is(":animated")) return;
-        
+
         if (y > 0) {
             if (page == 4) return;
             page++;
@@ -16,7 +16,7 @@ $(document).ready(function () {
             page--;
         }
         console.log(page)
-        if(page == 2) {
+        if (page == 2) {
             classAdd()
         }
         let posTop = (page - 1) * $(window).height();
@@ -24,14 +24,28 @@ $(document).ready(function () {
     })
 
     $('.navigate ul li a').on('click', function (e) {
-        e.preventDefault();
-        if (e.target.id == 'header') page = 1
-        if (e.target.id == 'skill') page = 2
-        if (e.target.id == 'project') page = 3
-        if (e.target.id == 'footer') page = 4
-        if(page == 2) {
-            classAdd()
+        switch (e.target.id) {
+            case 'header': {
+                page = 1;
+                break;
+            }
+            case 'skill': {
+                page = 2;
+                classAdd()
+                break;
+
+            }
+            case 'project': {
+                page = 3;
+                break;
+            }
+            case 'footer': {
+                page = 4
+                break;
+            }
         }
+
+
         let posTop = (page - 1) * $(window).height();
         html.animate({ scrollTop: posTop }, 800);
     })
@@ -66,7 +80,7 @@ $(document).ready(function () {
     });
 })
 
-consoleText(['안녕하세요.','팀에 나이스한 구성원이 될','프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
+consoleText(['안녕하세요.','주체적으로 생각하고 움직이는', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
@@ -106,8 +120,8 @@ function consoleText(words, id, colors) {
 }
 
 
-    
+
 
 function classAdd() {
-    $('.section-inner').addClass('on')   
+    $('.section-inner').addClass('on')
 }
