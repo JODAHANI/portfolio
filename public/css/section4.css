@@ -353,6 +353,7 @@ i a {
     }
     .section4-right p {
         font-size: 0.8rem;
+        letter-spacing: 0px;
     }
     .section4-right .box {
         padding: 2rem;
