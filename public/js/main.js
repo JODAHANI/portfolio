@@ -6,7 +6,6 @@ html.animate({ 'scrollTop': 0 }, 10);
 $(document).ready(function () {
     $('#fullpage').fullpage({
         menu: '#myMenu',
-        anchors: ['1', '2', '3', '4'],
 		autoScrolling:true,
 	});
     function pageMove(e) {
