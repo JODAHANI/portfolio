@@ -23,7 +23,7 @@ var flameEndX = shipCenter.x;
 let imgMap = (id) => {
     let imgs = []
     for (let i = 0; i < 5; i++) {
-        let img = `<img src='../img/${id}/0${i + 1}.jpg'>`
+        let img = `<img src='file:///C:/Users/%EC%82%AC%EB%AC%B4%EC%8B%A4/Desktop/img/${id}/0${i + 1}.jpg'>`
         imgs.push(img)
     }
     let box = `
