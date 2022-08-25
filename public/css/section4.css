@@ -367,3 +367,21 @@ i a {
         right: 12%;
     }
 }
+@media (max-width: 720px) {
+    .section4-inner  {
+        margin-top: 0rem;
+    }
+    .section4-right .box-bottom {
+        top: 1.2rem;
+    }
+    .box-bottom h3{
+        margin-right: 0.8rem;
+    }
+    .contact {
+        padding: 0;
+        margin-right: 0.8rem;
+    }
+    .contact i{
+        width: 30px;
+    }
+}

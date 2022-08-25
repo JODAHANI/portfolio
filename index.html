@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.css" integrity="sha512-1No3nMY/zD37h1POyqULfwc9WMzWvXcal6F7/OIhNdWkTaEbt4Y6eqX0vXail7Zh5JjnBdMMKr+lRvqTNFr3Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/section2.css">
@@ -17,31 +18,43 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="fullpage">
         <nav class="navigate">
             <ul>
-                <li>
-                    <a id="header" href="#section1">&lt;Header /&gt;</a>
+                <li >
+                    <a id="header" data-menuanchor="1" href="#1">&lt;Header /&gt;</a>
                 </li>
-                <li>
-                    <a id="skill" href="#section2">&lt;Skill /&gt;</a>
+                <li >
+                    <a id="skill" data-menuanchor="2" href="#2">&lt;Skill /&gt;</a>
                 </li>
-                <li>
-                    <a id="project" href="#section3">&lt;Project /&gt;</a>
+                <li >
+                    <a id="project" data-menuanchor="3" href="#3">&lt;Project /&gt;</a>
                 </li>
-                <li>
-                    <a id="footer" href="#section4">&lt;Footer /&gt;</a>
+                <li >
+                    <a id="footer" data-menuanchor="4" href="#4">&lt;Footer /&gt;</a>
                 </li>
+                <!-- <li >
+                    <a id="header" data-menuanchor="1" href="1" onclick="fullpage_api.moveTo(1, 0);">&lt;Header /&gt;</a>
+                </li>
+                <li >
+                    <a id="skill" data-menuanchor="2" href="2" onclick="fullpage_api.moveTo(2, 0);">&lt;Skill /&gt;</a>
+                </li>
+                <li >
+                    <a id="project" data-menuanchor="3" href="3" onclick="fullpage_api.moveTo(3, 0);">&lt;Project /&gt;</a>
+                </li>
+                <li >
+                    <a id="footer" data-menuanchor="4" href="4" onclick="fullpage_api.moveTo(4, 0);">&lt;Footer /&gt;</a>
+                </li> -->
             </ul>
         </nav>
-        <div class="section" id="section1">
+        <div class="section" id="section1" data-anchor="1">
             <div id="particles-js">
                 <div class="greeting-box">
                     <h3 id="name"></h3>
                 </div>
             </div>
         </div>
-        <div class="section" id="section2">
+        <div class="section" id="section2" data-anchor="2">
             <div class="section2-bg"></div>
             <div class="section-inner">
                 <h1>&lt;Skill /&gt;</h1>
@@ -198,7 +211,7 @@
             <div class="star star1"></div>
             <div class="star star2"></div>
         </div> 
-        <div class="section" id="section3">
+        <div class="section" id="section3" data-anchor="3">
             <div class="modal">
                 <div class="bg">
                     <div class="contents">
@@ -248,7 +261,7 @@
             <canvas id="ship"></canvas>
             <canvas id="bg"></canvas>
         </div>
-        <div class="section" id="section4">
+        <div class="section" id="section4" data-anchor="4">
             <div class="section4-bg">
                 <div class="star-anim-1"></div>
                 <div class="star-anim-2"></div>
@@ -290,10 +303,10 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js" integrity="sha512-Gx/C4x1qubng2MWpJIxTPuWch9O88dhFFfpIl3WlqH0jPHtCiNdYsmJBFX0q5gIzFHmwkPzzYTlZC/Q7zgbwCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>

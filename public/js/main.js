@@ -4,12 +4,15 @@ var page = 1;
 html.animate({ 'scrollTop': 0 }, 10);
 
 $(document).ready(function () {
+    $('#fullpage').fullpage({
+        menu: '#myMenu',
+        anchors: ['1', '2', '3', '4'],
+		autoScrolling:true,
+	});
     function pageMove(e) {
         let y = e.originalEvent.deltaY
-
-        if (html.is(":animated")) return;
-
         if (y > 0) {
+            
             if (page == 4) return;
             page++;
         } else if (y < 0) {
@@ -18,9 +21,9 @@ $(document).ready(function () {
         }
         if (page == 2) {
             classAdd()
-        }
-        let posTop = (page - 1) * $(window).height();
-        html.animate({ scrollTop: posTop }, 700);
+        } 
+        
+        
     }
     $(window).on("wheel", function (e) {
         pageMove(e)
@@ -32,7 +35,7 @@ $(document).ready(function () {
     })
 
     $('.navigate ul li a').on('click', function (e) {
-        e.preventDefault();
+        console.log(e.target.id)
         switch (e.target.id) {
             case 'header': {
                 page = 1;
@@ -54,9 +57,6 @@ $(document).ready(function () {
             }
         }
 
-
-        let posTop = (page - 1) * $(window).height();
-        html.animate({ scrollTop: posTop }, 800);
     })
     particlesJS("particles-js", {
         "particles": {
@@ -133,4 +133,8 @@ function consoleText(words, id, colors) {
 
 function classAdd() {
     $('.section-inner').addClass('on')
+}
+
+function classRemove() {
+    $('.section-inner').removeClass('on')
 }
