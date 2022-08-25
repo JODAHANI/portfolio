@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
 })
 
-consoleText(['안녕하세요.', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
+consoleText(['안녕하세요.','주체적으로 생각하고 움직이는', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
