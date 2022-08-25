@@ -575,7 +575,7 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
         line-height: 3rem;
         letter-spacing: 2px;
     }
-    .navigate {
+    .navigate ul li a {
         font-size: 0.9rem;
     }
 }
