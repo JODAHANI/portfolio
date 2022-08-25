@@ -399,7 +399,7 @@
 .section2-bg {
     position: absolute;
     width: 400%;
-    height: 400vh;
+    height: 200vh;
     border: 1px solid red;
     transform: rotate(10deg);
     top: 50%;

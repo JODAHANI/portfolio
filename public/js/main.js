@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
 })
 
-consoleText(['안녕하세요.', '팀에 나이스한 구성원이 될', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
+consoleText(['안녕하세요.', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
