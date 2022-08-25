@@ -4,6 +4,7 @@
     padding: 5rem;
     padding-top: 4rem;
     padding-left: 3rem;
+    overflow: hidden;
 }
 
 #section2 h1 {
@@ -399,7 +400,7 @@
 .section2-bg {
     position: absolute;
     width: 400%;
-    height: 200vh;
+    height: 400vh;
     border: 1px solid red;
     transform: rotate(10deg);
     top: 50%;
