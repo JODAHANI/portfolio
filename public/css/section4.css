@@ -364,10 +364,19 @@ i a {
     .section4-right .box-bottom {
         position: absolute;
         top: 0.5rem;
-        right: 12%;
+        right: 5%;
     }
 }
 @media (max-width: 720px) {
+    .section4-left {
+        padding: 0;
+    }
+    .section4-right p{
+        width: 100%;
+    }
+    .section4-right {
+        padding: 1rem;
+    }
     .section4-inner  {
         margin-top: 0rem;
     }
