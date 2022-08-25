@@ -573,11 +573,15 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
         line-height: 3rem;
         letter-spacing: 2px;
     }
-    .navigate ul li a {
-        font-size: 0.9rem;
+    .navigate ul li {
+        padding: 0.5rem 0.5rem;
     }
 }
-@media (max-height: 650px) {
+@media (max-height: 500px) {
+   
+    .navigate ul li a {
+        font-size: 0.8rem;
+    }
     .astronaut {
         opacity: 0;
     }

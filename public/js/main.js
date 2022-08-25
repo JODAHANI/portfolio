@@ -10,17 +10,25 @@ $(document).ready(function () {
 	});
     function pageMove(e) {
         let y = e.originalEvent.deltaY
-        if (y > 0) {
+        if(y) {
+            if (y > 0) {
             
-            if (page == 4) return;
-            page++;
-        } else if (y < 0) {
-            if (page == 1) return;
-            page--;
+                if (page == 4) return;
+                page++;
+            } else if (y < 0) {
+                if (page == 1) return;
+                page--;
+            }
+            if (page == 2) {
+                classAdd()
+            } 
+        } else {
+            let a = e.originalEvent.touches[0].screenY 
+            if(a > 100) {
+                classAdd()
+            }
         }
-        if (page == 2) {
-            classAdd()
-        } 
+        
         
         
     }
@@ -28,7 +36,7 @@ $(document).ready(function () {
         pageMove(e)
         
     })
-    $(window).on("scroll", function (e) {
+    $(window).on("touchmove", function (e) {
         pageMove(e)
         
     })
