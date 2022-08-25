@@ -24,7 +24,7 @@ let imgMap = (id) => {
     let imgs = []
     for (let i = 0; i < 5; i++) {
         console.log(id)
-        let img = `<img src='../img/${id}/0${i + 1}.jpg'>`
+        let img = `<img src='./public//img/${id}/0${i + 1}.jpg'>`
         imgs.push(img)
     }
     let box = `
