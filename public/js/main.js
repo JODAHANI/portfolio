@@ -29,14 +29,9 @@ $(document).ready(function () {
 
     })
     $(window).on("touchstart", function (e) {
-        startCheck = e.originalEvent.changedTouches[0].screenY
+        classAdd()
     })
-    $(window).on("touchend", function (e) {
-        endCheck = e.originalEvent.changedTouches[0].screenY
-        if(endCheck < startCheck) {
-            classAdd()
-        }
-    })
+   
     $('.navigate ul li a').on('click', function (e) {
         console.log(e.target.id)
         switch (e.target.id) {
