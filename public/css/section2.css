@@ -1,4 +1,4 @@
-#section2 {
+.section2 {
     position: relative;
     top: 0;
     left: 0;
@@ -6,13 +6,13 @@
     overflow: hidden;
 }
 
-#section2 h1 {
+.section2 h1 {
     color: #fff;
     font-size: 2.5rem;
     font-weight: bold;
     margin-left: 5rem;
 }
-#section2 h2 {
+.section2 h2 {
     padding: 1rem 0;
 }
 .bottom-box {
@@ -81,12 +81,12 @@
     border-radius: 50px;
     box-sizing: border-box;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.5s 0.5s;
 }
-.section-inner.on{
-    animation: fade-in forwards 0.5s;
-    animation-delay: 1s;
+.section-inner.on {
+    opacity: 1;
 }
+
 
 .section-box {
     position:absolute; 
@@ -422,12 +422,18 @@
 }
 
 @media (max-width: 768px) {
-    #section2{
+    .section2{
         padding: 0rem;
     }
-    #section2 h1 {
+    .section2 h1 {
         margin: 0;
         text-align: center;
+    }
+}
+
+@media (max-height: 820px) {
+    .astronaut{
+        display: none;
     }
 }
 

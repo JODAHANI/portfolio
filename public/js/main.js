@@ -2,17 +2,17 @@ let html = $("html");
 const section1 = $("#section1");
 var page = 1;
 html.animate({ 'scrollTop': 0 }, 10);
-
+let startCheck;
+let endCheck;
 $(document).ready(function () {
     $('#fullpage').fullpage({
-        menu: '#myMenu',
-		autoScrolling:true,
-	});
+        autoScrolling: true,
+    });
     function pageMove(e) {
         let y = e.originalEvent.deltaY
-        if(y) {
+        if (y) {
             if (y > 0) {
-            
+
                 if (page == 4) return;
                 page++;
             } else if (y < 0) {
@@ -21,26 +21,22 @@ $(document).ready(function () {
             }
             if (page == 2) {
                 classAdd()
-            } 
-        } else {
-            let a = e.originalEvent.touches[0].screenY 
-            if(a > 100) {
-                classAdd()
             }
-        }
-        
-        
-        
+        } 
     }
     $(window).on("wheel", function (e) {
         pageMove(e)
-        
-    })
-    $(window).on("touchmove", function (e) {
-        pageMove(e)
-        
-    })
 
+    })
+    $(window).on("touchstart", function (e) {
+        startCheck = e.originalEvent.changedTouches[0].screenY
+    })
+    $(window).on("touchend", function (e) {
+        endCheck = e.originalEvent.changedTouches[0].screenY
+        if(endCheck < startCheck) {
+            classAdd()
+        }
+    })
     $('.navigate ul li a').on('click', function (e) {
         console.log(e.target.id)
         switch (e.target.id) {
@@ -96,7 +92,7 @@ $(document).ready(function () {
     });
 })
 
-consoleText(['안녕하세요.','주체적으로 생각하고 움직이는', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
+consoleText(['안녕하세요.', '주체적으로 생각하고 움직이는', '프론트엔드 개발자', '조다한입니다.'], 'name', ['white']);
 
 function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];

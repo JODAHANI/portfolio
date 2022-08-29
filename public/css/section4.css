@@ -1,4 +1,4 @@
-#section4 {
+.section4 {
     z-index: 2;
     overflow: hidden;
 }
@@ -17,7 +17,7 @@
     transform: translate(-50%,-50%);
     width: 80%;
     height: 100%;
-    max-height: 550px;
+    max-height: 530px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +173,7 @@
     padding: 1rem 0rem;
     text-align: right;
     position: absolute;
-    bottom: 0.5rem;
+    bottom: -5.5rem;
     right: 5%;
 }
 .box-bottom  a{
@@ -329,80 +329,93 @@ i a {
     
 
 @media (max-width: 1024px) {
-    .section4-inner  {
-        flex-direction: column;
-        width: 100%;
-        max-height: 100%;
-        margin-top: 8rem;
+    .section4-inner {
+        position: absolute;
+        display: block;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%,-50%);
+        max-height: 450px;
         padding: 0 3rem;
     }
     .section4-left {
-        width: 30%;
-        height: 30%;
-        margin: 0;
-        padding: 2rem 0;
+        margin: 0 auto;
+        max-height: 150px;
+        max-width: 150px;
+        margin-bottom: 1rem;
     }
-    .section4-inner .left img{
-        width: 100%;
+    .section4-left img{
+        height: 100%;
+
     }
     .section4-right {
-        padding: 3rem;
-        border: none;
-        height: inherit;
-        padding-top: 0;
-    }
-    .section4-right p {
-        font-size: 0.8rem;
-        letter-spacing: 0px;
+        max-height: 300px;
     }
     .section4-right .box {
-        padding: 2rem;
-        border: 1px solid #fff;
-        border-radius: 10px;
-       
-    }
-    .section4-right .box-bottom {
         position: absolute;
-        top: 0.5rem;
-        right: 8%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 85%;
+    }
+    .info p {
+        width: 100%;
+        padding: 0;
+    }
+    .box h2 {
+        margin-bottom: 1rem;
     }
 }
-@media (max-width: 680px) {
-    
-    .section4-inner {
-        transform: translate(-50%,-50%);
-        margin-top: 8rem;
+@media (max-width: 720px) {
+    .box-bottom {
+        bottom: -5.5rem;
     }
-    
+}
+@media (max-width: 520px) {
     .section4-left {
-        padding: 0;
-        flex: 1;
+        display: none
     }
-    .section4-right p{
-        padding: 0;
-        width: 100%;
+    .navigate ul li{
+        font-size: 1rem;
+        padding: 0 0.3rem;
     }
-    .section4-right {
-        flex: 4;
-        padding: 0.5rem 1rem;
+    .section4-inner {
+        top: 50%;
     }
-    .section4-right .box-bottom {
-        top: 1.2rem;
+    .section4-right{
+        padding: 1rem;
+        height: 100%;
+        max-height: inherit
+        
     }
-    .box-bottom h3{
-        margin-right: 0.8rem;
+    
+    .box-bottom {
+        bottom: -4rem;
+        right: 0;
+        left: 45%;
+        transform: translateX(-50%);
     }
     .contact {
         padding: 0;
-        margin-right: 0.8rem;
     }
     .contact i{
-        width: 30px;
+        padding: 0 0.5rem;
     }
-    .section4-right .box {
-        padding: 2rem 1.5rem;
+    .contact a{
+        padding: 0 0.5rem;
     }
-    .section4-right .box-bottom {
-        right: 5%;
+    .box-bottom h3{
+        display: none;
     }
+}
+
+
+@media (max-height: 550px) {
+    .section4-left {
+        display: none;
+    }
+    .section4-inner{
+        margin-top: 5rem;
+    }
+   
 }

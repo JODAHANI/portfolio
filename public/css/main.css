@@ -79,24 +79,25 @@ body,
     position: relative;
 }
 
-#section1 {
+.section1 {
     background-color: #0e0e14;
     position: relative;
     z-index: 1;
 }
 
-#section2 {
+.section2 {
     background-color: rgb(2, 9, 20);
 }
 
-#section3 {
+.section3 {
     position: relative;
     left: 0;
     top: 0;
     z-index: 1;
 }
 
-#section4 {
+.section4 {
+    position: relative;
     background-color: #0e0e14;
     box-sizing: border-box;
 }
@@ -170,7 +171,7 @@ body,
     z-index: 3;
 }
 
-#section3 .card-box {
+.section3 .card-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -184,7 +185,7 @@ body,
     text-align: center;
 }
 
-#section3 .card-box.on {
+.section3 .card-box.on {
     display: none;
 }
 
