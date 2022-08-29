@@ -293,7 +293,7 @@ input[name=tabmenu] {
 .btn label {
     background-color: gray;
     width: 50px;
-    height: 5px;
+    height: 10px;
     display: inline-block;
     cursor: pointer;
 }
