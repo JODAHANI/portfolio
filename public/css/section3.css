@@ -381,7 +381,7 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
         right: 180%;
     }
     .slick-next {
-        left: 210%;
+        left: 205%;
     }
     li.body {
         font-size: 1.2rem;
