@@ -571,11 +571,7 @@ input[id=tab6]:checked~.btn label[for=tab6]  {
     }
 }
 @media (max-height: 500px) {
-   
     .navigate ul li a {
         font-size: 0.8rem;
-    }
-    .astronaut {
-        opacity: 0;
     }
 }
