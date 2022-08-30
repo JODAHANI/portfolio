@@ -20,7 +20,7 @@ var project = [
     {
         _id: 3,
         title: 'Firestargram',
-        technology: 'Node.js, MongoDB',
+        technology: 'HTML,CSS,Javscript,Firebase',
         description: `
             Node.js 를 사용하여 파이어스타그램을 제작했습니다.
             유저들이 피드를 업로드를 할 수 있으며, 업로드 할 때 사진에 필터를 씌울 수 있도록 했습니다.
